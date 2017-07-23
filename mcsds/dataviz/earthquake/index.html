@@ -8,18 +8,15 @@
 
 <script>
 // Projection: equirectangular
-var width = 960,
-height = 960;
+var width = 960, height = 960;
 
-var radius = height / 2 - 5,
-scale = radius,
-velocity = 0.2;
+var radius = height / 2 - 5,  scale = radius, velocity = 0.2;
 
 var projection = d3.geoMercator()
-.translate([width/2, height/2])
+  .translate([width/2, height/2])
 
 var path = d3.geoPath()
-.projection(projection);
+  .projection(projection);
 
 var svg = d3.select("body").append("svg")
 .attr("width", width)
@@ -36,7 +33,7 @@ g.insert('path', '.graticule')
 .attr('d', path)
 .style('fill', 'steelblue')
 
-d3.json('data/2010-2017.json', function(error, quake) {
+d3.json('./data/2010-2017.json', function(error, quake) {
 if(error) throw error;
 // console.log(quake);
 
