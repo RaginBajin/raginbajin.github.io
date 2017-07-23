@@ -35,7 +35,7 @@ g.insert('path', '.graticule')
 .attr('d', path)
 .style('fill', 'steelblue')
 
-d3.json('data/2010-2017.json', function(error, quake) {
+d3.json('https://raginbajin.github.io/mcsds/dataviz/earthquake/data/2010-2017.json', function(error, quake) {
 if(error) throw error;
 // console.log(quake);
 
