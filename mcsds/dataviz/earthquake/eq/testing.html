@@ -1,7 +1,7 @@
 <html>
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.js"></script>
     <link rel="stylesheet" type="text/css" href="https://raginbajin.github.io/mcsds/dataviz/earthquake/eq/eq.css" media="screen" />
 </head>
 <body>
@@ -47,23 +47,23 @@ var gQuakes = svg.append('g')
 .attr('id', 'all-quakes');
 
 // Import the geoJSON file for the world map
-//d3.json('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25240/world-110m.json', function(error, world) {
-d3.json('https://unpkg.com/us-atlas@1/us/10m.json', function(error, world) {
+d3.json('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25240/world-110m.json', function(error, world) {
+//d3.json('https://unpkg.com/us-atlas@1/us/10m.json', function(error, world) {
 if(error) throw error;
-});
+
 // Append the World Map
 var worldMap = g.append('path')
     .attr('clip-path', 'url(#clip-path)') // attaches the clip path to not draw the map underneath the x axis
-    .datum(topojson.merge(world, world.objects.counties.geometries)) // draws a single land object for the entire map
+    .datum(topojson.merge(world, world.objects.countries.geometries)) // draws a single land object for the entire map
     .attr('class', 'states')
     .attr('d', path);
 
 // Append the World Map County Borders
 g.append('path')
-    .datum(topojson.mesh(world, world.objects.counties, function(a, b) { return a !== b; }))
+    .datum(topojson.mesh(world, world.objects.land, function(a, b) { return a !== b; }))
     .attr('class', 'boundry')
     .attr('d', path);
-
+});
 </script>
 
 
