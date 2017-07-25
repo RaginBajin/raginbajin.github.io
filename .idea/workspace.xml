@@ -2,8 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c97ae1e-ea8c-45f3-98ed-3450929ca2c8" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/leap/leap.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/remotes/remotes.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/print/paper.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/print/paper.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/print/pdf.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/print/pdf.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/README.md" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/beige.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/beige.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/black.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/black.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/blood.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/blood.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/league.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/league.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/moon.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/moon.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/night.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/night.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/serif.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/serif.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/simple.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/simple.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/sky.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/sky.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/solarized.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/solarized.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/beige.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/beige.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/black.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/black.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/blood.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/blood.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/league.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/league.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/moon.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/moon.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/night.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/night.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/serif.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/serif.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/simple.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/simple.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/sky.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/sky.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/solarized.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/solarized.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/white.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/white.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/mixins.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/settings.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/settings.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/theme.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/theme.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/white.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/white.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/highlight/highlight.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/highlight/highlight.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/example.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/example.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/example.md" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/example.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/markdown.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/markdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/marked.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/marked.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/math/math.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/math/math.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/client.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/index.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/master.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/master.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/client.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/client.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/index.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/notes.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/notes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes/notes.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes/notes.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes/notes.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes/notes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/print-pdf/print-pdf.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/print-pdf/print-pdf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/search/search.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/search/search.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/zoom-js/zoom.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/zoom-js/zoom.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +71,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mcsds/dataviz/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1170">
@@ -62,11 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+            <state relative-caret-position="184">
+              <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -81,6 +130,11 @@
         <option value="CSS File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>controls</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -99,8 +153,8 @@
         <option value="$PROJECT_DIR$/mcsds/dataviz/earthquake/test.html" />
         <option value="$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/testing.html" />
         <option value="$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/index.html" />
-        <option value="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.css" />
         <option value="$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/eq.css" />
+        <option value="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.css" />
         <option value="$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html" />
       </list>
     </option>
@@ -185,6 +239,62 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="earthquake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="raginbajin.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="raginbajin.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcsds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataviz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="earthquake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="raginbajin.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="raginbajin.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcsds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dataviz" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="earthquake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -633,7 +743,7 @@
       <workItem from="1494810968333" duration="773000" />
       <workItem from="1500516768696" duration="190000" />
       <workItem from="1500742007323" duration="6027000" />
-      <workItem from="1500943976710" duration="3020000" />
+      <workItem from="1500943976710" duration="4417000" />
     </task>
     <task id="LOCAL-00001" summary="Added Data Viz directory and test files.">
       <created>1494734597044</created>
@@ -646,7 +756,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10963000" />
+    <option name="totallyTimeSpent" value="12360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="42" width="1260" height="695" extended-state="0" />
@@ -861,22 +971,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="54" lean-forward="false" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
-          <folding>
-            <element signature="e#35058#39467#2" expanded="false" />
-            <element signature="e#40228#40867#2" expanded="false" />
-            <element signature="e#40935#41190#2" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/eq.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="24" column="1" lean-forward="true" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/lib/js/head.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2081">
+          <caret line="191" column="17" lean-forward="false" selection-start-line="191" selection-start-column="17" selection-end-line="191" selection-end-column="17" />
+          <folding>
+            <element signature="e#39238#43647#2" expanded="true" />
+            <element signature="e#44393#45032#2" expanded="true" />
+            <element signature="e#45100#45355#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -909,14 +1037,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="81" column="0" lean-forward="false" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
           <folding />
         </state>
       </provider>
