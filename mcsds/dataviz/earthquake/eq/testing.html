@@ -1,8 +1,8 @@
 <html>
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://raginbajin.github.io/mcsds/dataviz/earthquake/eq/eq.css" media="screen" />
+
 </head>
 <body>
 
@@ -11,8 +11,8 @@
 <script>
 // Setup the svg element size and margins
 var margin = {top: 20, right: 20, bottom: 20, left: 20},
-width = 1200 - margin.left - margin.right,
-height = 800 - margin.top - margin.bottom;
+width = 720 - margin.left - margin.right,
+height = 500 - margin.top - margin.bottom;
 
 // Set the projection methods for the world map
 var projection = d3.geoMercator()
@@ -26,7 +26,11 @@ var path = d3.geoPath()
 // Create a variable to hold the main svg element
 var svg = d3.select("body").append("svg")
 .attr("width", width)
-.attr("height", height);
+.attr("height", height)
+    .attr("fill", "none")
+    .attr("stroke", "#000")
+    .attr("stroke-linejoin", "round")
+    .attr("");
 
 // Group to hold the maps and borders
 var g = svg.append('g')
@@ -47,20 +51,18 @@ var gQuakes = svg.append('g')
 .attr('id', 'all-quakes');
 
 // Import the geoJSON file for the world map
-d3.json('https://s3-us-west-2.amazonaws.com/s.cdpn.io/25240/world-110m.json', function(error, world) {
-//d3.json('https://unpkg.com/us-atlas@1/us/10m.json', function(error, world) {
+d3.json('https://unpkg.com/us-atlas@1/us/10m.json', function(error, us) {
 if(error) throw error;
 
-// Append the World Map
+// Append the US Map
 var worldMap = g.append('path')
     .attr('clip-path', 'url(#clip-path)') // attaches the clip path to not draw the map underneath the x axis
-    .datum(topojson.merge(world, world.objects.countries.geometries)) // draws a single land object for the entire map
-    .attr('class', 'states')
+    .datum(topojson.merge(us, us.objects.counties)) // draws a single land object for the entire map
     .attr('d', path);
 
 // Append the World Map County Borders
 g.append('path')
-    .datum(topojson.mesh(world, world.objects.land, function(a, b) { return a !== b; }))
+    .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
     .attr('class', 'boundry')
     .attr('d', path);
 });
