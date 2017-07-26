@@ -2,57 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c97ae1e-ea8c-45f3-98ed-3450929ca2c8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/leap/leap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/remotes/remotes.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/print/paper.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/print/paper.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/print/pdf.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/print/pdf.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/reveal.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/README.md" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/beige.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/beige.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/black.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/black.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/blood.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/blood.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/league.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/league.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/moon.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/moon.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/night.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/night.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/serif.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/serif.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/simple.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/simple.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/sky.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/sky.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/solarized.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/solarized.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/beige.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/beige.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/black.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/black.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/blood.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/blood.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/league.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/league.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/moon.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/moon.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/night.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/night.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/serif.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/serif.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/simple.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/simple.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/sky.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/sky.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/solarized.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/solarized.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/white.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/source/white.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/mixins.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/settings.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/settings.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/theme.scss" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/template/theme.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/white.css" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/css/theme/white.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/highlight/highlight.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/highlight/highlight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/example.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/example.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/example.md" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/example.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/markdown.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/markdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/marked.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/markdown/marked.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/math/math.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/math/math.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/client.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/index.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/master.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/multiplex/master.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/client.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/client.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/index.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/notes.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes-server/notes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes/notes.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes/notes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes/notes.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/notes/notes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/print-pdf/print-pdf.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/print-pdf/print-pdf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/search/search.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/search/search.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/zoom-js/zoom.js" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/plugin/zoom-js/zoom.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,7 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mcsds/dataviz/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1170">
@@ -111,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+            <state relative-caret-position="967">
+              <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -385,7 +336,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/raginbajin.github.io/mcsds/dataviz/earthquake/index.html">
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -727,6 +681,14 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -743,7 +705,7 @@
       <workItem from="1494810968333" duration="773000" />
       <workItem from="1500516768696" duration="190000" />
       <workItem from="1500742007323" duration="6027000" />
-      <workItem from="1500943976710" duration="4417000" />
+      <workItem from="1500943976710" duration="6544000" />
     </task>
     <task id="LOCAL-00001" summary="Added Data Viz directory and test files.">
       <created>1494734597044</created>
@@ -756,7 +718,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12360000" />
+    <option name="totallyTimeSpent" value="14487000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="42" width="1260" height="695" extended-state="0" />
@@ -776,7 +738,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.399361" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1001,14 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/testing.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="349">
@@ -1037,6 +991,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
           <caret line="78" column="19" lean-forward="false" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="967">
+          <caret line="65" column="18" lean-forward="true" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
           <folding />
         </state>
       </provider>
