@@ -15,13 +15,16 @@
         .attr("width", width)
         .attr("height", height)
 
-    d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson', function(error, earthquakes) {
+    d3.csv('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.csv', function(error, eqcsv){
         if (error) throw error;
-        console.log(earthquakes)
+ //       });
+//    d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson', function(error, earthquakes) {
+ //       if (error) throw error;
+    console.log(eqcsv)
     var nest = d3.nest()
-        .key(function(d) { return d.type; })
+        .key(function(d) { return d.type })
         .rollup(function(values) { return values.length; })
-        .entries(earthquakes);
+        .entries(eqcsv);
 
     console.log(nest);
 
