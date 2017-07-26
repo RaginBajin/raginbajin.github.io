@@ -19,6 +19,8 @@
     <link rel='stylesheet' href='lib/css/zenburn.css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.min.js"></script>
+    <script src='lib/js/head.min.js'></script>
+    <script src='js/reveal.js'></script>
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -74,7 +76,6 @@
                 This has a lot of stuff in it.
             </section>
         </section>
-
           <section data-state="eq24hour" id="eq24hour">
                 <h3>Lets look at the number of Earthquakes in the last 24 hours.</h3>
                 <div id="eq24hourcontainer"></div>
@@ -210,7 +211,7 @@
 // Grab the longest delay for the xAxis marker
                               var longestDelay = quake[quake.length - 1].delay;
 
-// Changes the radius of the earthquakes to their magnitue using a transition
+// Changes the radius of the earthquakes to their magnitude using a transition
 // and the delay created from the setQuakeDelay function
                               var quakeCircles = svg.selectAll('.quake-circle')
                                   .data(quake)
@@ -266,13 +267,26 @@
               </script>
 
         </section>
+        <section>
+            <h2>Wow!</h2>
+            <p>That's a lot of earth movement in just a single day.</p>
+        </section>
+        <section>
+            <p>Let's focus on just the United States.</p>
+        </section>
+        <section>
+            <h3>Number of Earthquakes in just the United States.</h3>
 
+        </section>
+
+
+
+</section>
     </div>
 </div>
 
 
-<script src='lib/js/head.min.js'></script>
-<script src='js/reveal.js'></script>
+
 
 <script>
     // Full list of configuration options available at:
