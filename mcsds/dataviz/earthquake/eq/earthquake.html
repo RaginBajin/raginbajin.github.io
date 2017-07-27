@@ -82,9 +82,9 @@
             .attr("transform", function(d) {
                 return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")";
             })
-            .attr("opacity", function(d) {
-                return opacity(Date.now() - d.properties.time)
-            })
+       //     .attr("opacity", function(d) {
+         //       return opacity(Date.now() - d.properties.time)
+        //    })
             .on("mouseover", function() {
                 focus.style("opacity", 1);
             })
@@ -94,7 +94,7 @@
             .on("mousemove", function(d) {
                 var o = projection(d.geometry.coordinates);
                 focus
-                    .text(d.properties.mag + ' ' + moment(+d.properties.time).calendar())
+                    .text(d.properties.mag + ' ' + d.properties.type)
                     .attr("dy", +20)
                     .attr("text-anchor", "middle")
                     .attr("transform", "translate(" + o[0] + "," + o[1] + ")" );
@@ -102,7 +102,11 @@
         quakes.append("circle")
             .attr("r", 2)
             .style("fill", function(d) {
-                return "rgb(222, 45, 38)"; // color( +d.geometry.coordinates[2] );
+                if(d.properties.type !== "earthquake") {
+                    return "rgb(30,144,255)"; // color is dodger blue
+                } else {
+                    return "rgb(222, 45, 38)";
+                }
             });
 
         setInterval(function() {
@@ -115,13 +119,13 @@
                 .style("stroke-width", 2)
                 .transition()
                 .ease(d3.easeLinear)
-                .duration(function(d) { return 125*radius(d.properties.mag); })
-                .attr("r", function(d) { return radius(d.properties.mag); })
+                .duration(function(d) { return Math.abs(125*radius(d.properties.mag)); })
+                .attr("r", function(d) { return Math.abs(radius(d.properties.mag)); })
                 .style("stroke-opacity", 0)
                 .style("stroke-width", 0)
                 .remove();
-        }, 250);
 
+        }, 5000);
     });
 
 
