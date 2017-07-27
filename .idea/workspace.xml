@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c97ae1e-ea8c-45f3-98ed-3450929ca2c8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/earthquake.html" afterPath="$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/earthquake.html" />
-    </list>
+    <list default="true" id="2c97ae1e-ea8c-45f3-98ed-3450929ca2c8" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,8 +62,8 @@
       <file leaf-file-name="earthquake.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/earthquake.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="118" column="28" lean-forward="true" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
+            <state relative-caret-position="-154">
+              <caret line="98" column="50" lean-forward="true" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -655,7 +653,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26505000" />
+    <option name="totallyTimeSpent" value="26966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="10" y="42" width="1260" height="695" extended-state="0" />
@@ -1150,8 +1148,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mcsds/dataviz/earthquake/eq/earthquake.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="118" column="28" lean-forward="true" selection-start-line="118" selection-start-column="28" selection-end-line="118" selection-end-column="28" />
+        <state relative-caret-position="-154">
+          <caret line="98" column="50" lean-forward="true" selection-start-line="98" selection-start-column="50" selection-end-line="98" selection-end-column="50" />
           <folding />
         </state>
       </provider>
