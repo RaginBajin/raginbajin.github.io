@@ -114,7 +114,11 @@
             quakes.append("circle")
                 .attr("r", 0)
                 .style("stroke", function(d) {
-                    return "rgb(222, 45, 38)"; // color( +d.geometry.coordinates[2] );
+                    if(d.properties.type !== "earthquake") {
+                        return "rgb(30,144,255)"; // color is dodger blue
+                    } else {
+                        return "rgb(222, 45, 38)";
+                    }
                 })
                 .style("stroke-width", 2)
                 .transition()
