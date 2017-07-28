@@ -3,66 +3,81 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.js"></script>
     <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
     <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/1.18.0/d3-annotation.js"></script>
     <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<svg id="map"></svg>
+<h4>Quarry Blasts and Ice Quakes are so powerful that they register like Earthquakes!</h4>
+<div id="eqChoices">
+  <input type="checkbox" class="eqChoices" value="all" checked="true">All Values
+  <input type="checkbox" class="eqChoices" value="earthquake">Just Earthquakes
+  <input type="checkbox" class="eqChoices" value="noeq">Non-Earthquakes
+</div>
+<div id="eqEventTypecontainer"></div>
 
 <script>
+                    var width = 960,
+                        height = 600;
 
-    var width = 960,
-        height = 600;
+                    var projection = d3.geoAlbersUsa();
+                    var path = d3.geoPath()
+                        .projection(projection);
+                    var svg = d3.select("#eqEventTypecontainer").append("svg")
+                        .attr("width", width)
+                        .attr("height", height);
+                    var g = svg.append('g')
 
-    var projection = d3.geoAlbers()
-    var path = d3.geoPath()
-        .projection(null);
-    var svg = d3.select("#map")
-        .attr("width", width)
-        .attr("height", height);
-    var g = svg.append('g')
+                    var focus = svg.append("text")
+                        .attr("class", "focus");
 
-    var focus = svg.append("text")
-        .attr("class", "focus");
+                    d3.json("us.json", function(error, world) {
+                        g.append("path")
+                            .attr("d", path(topojson.feature(world, world.objects.states)))
+                            .attr("class", "land")
 
-    d3.json("https://d3js.org/us-10m.v1.json", function(error, world) {
-        g.append("path")
-            .attr("d", path(topojson.feature(world, world.objects.states)))
-            .attr("class", "land")
+                        g.append("path")
+                            .attr("d", path(topojson.mesh(world, world.objects.counties, function(a, b) { return a.id !== b.id; })))
+                            .attr("class", "borders");
+                    });
 
-        g.append("path")
-            .attr("d", path(topojson.mesh(world, world.objects.counties, function(a, b) { return a.id !== b.id; })))
-            .attr("class", "borders");
-    });
+                    d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson', function(err, data) {
+                        var quakes = svg.append("g")
+                            .attr("class", "quakes")
+                            .selectAll(".quake")
+                            .data(data.features.reverse())
+                            .enter().append("g")
+                            .attr("class", "quakes")
+                            .attr("transform", function(d) {
+                                    console.log(projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1]);
+                                    return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")";
 
-    d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson', function(err, data) {
-        var quakes = svg.append("g")
-            .attr("class", "quakes")
-            .selectAll(".quake")
-            .data(data.features)
-            .enter().append("g")
-            .attr("class", "quake")
-            .on("mouseover", function() {
-                focus.style("opacity", 1);
-            })
-            .on("mouseout", function() {
-                focus.style("opacity", 0);
-            })
-            .on("mousemove", function(d) {
-                focus
-                    .text(d.properties.mag + ' ' + d.properties.type)
-                    .attr("dy", +20)
-                    .attr("text-anchor", "middle")
-            })
-        quakes.append("circle")
-            .attr("r", 4)
-            .style("fill", function(d) {
-                if(d.properties.type !== "earthquake") {
-                    return "rgb(30,144,255)"; // color is dodger blue
-                } else {
-                    return "rgb(222, 45, 38)";
-                }
-            });
-    });
+                            })
+                            .on("mouseover", function() {
+                                focus.style("opacity", 1);
+                            })
+                            .on("mouseout", function() {
+                                focus.style("opacity", 0);
+                            })
+                            .on("mousemove", function(d) {
+                                var o = projection(d.geometry.coordinates);
+                                focus
+                                    .text(d.properties.mag + ' ' + d.properties.type)
+                                    .attr("dy", +20)
+                                    .attr("text-anchor", "middle")
+                                    .attr("transform", "translate(" + o[0] + "," + o[1] + ")" );
+                            })
+
+                        quakes.append("circle")
+                            .attr("r", 4)
+                            .style("fill", function(d) {
+                                if(d.properties.type !== "earthquake") {
+                                    return "rgb(30,144,255)"; // color is dodger blue
+                                }else {
+                                    return "rgb(222, 45, 38)"; // color is red
+                                }
+                            });
+});
+
 
 
 

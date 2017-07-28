@@ -13,3 +13,27 @@
   fill: rgba(0,0,0,0);
   stroke-width: 1.5px;
 }
+
+text{
+    font: bold 11px Verdana, Helvetica, Arial, sans-serif;
+}
+
+.hidden { display: none; }
+
+.annotation circle {
+  fill: none;
+  stroke: black;
+}
+
+.annotation path {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.annotation text {
+  text-shadow: -2px 0 2px #fff,
+                0 2px 2px #fff,
+                2px 0 2px #fff,
+                0 -2px 2px #fff;
+}
