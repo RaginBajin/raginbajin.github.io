@@ -309,7 +309,7 @@
                             .attr("class", "quake")
                             .attr("transform", function(d) {
                                 if (d.properties.type !== "earthquake") {
-                                    return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")";
+                                    if (projection(d.geometry.coordinates)) { return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")" }
                                 }
                             })
                             .on("mouseover", function() {

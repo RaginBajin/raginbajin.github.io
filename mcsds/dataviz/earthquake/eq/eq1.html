@@ -40,7 +40,7 @@
                             .attr("class", "borders");
                     });
 
-                    d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson', function(err, data) {
+                    d3.json('all_month.geojson', function(err, data) {
                         var quakes = svg.append("g")
                             .attr("class", "quakes")
                             .selectAll(".quake")
@@ -48,9 +48,7 @@
                             .enter().append("g")
                             .attr("class", "quakes")
                             .attr("transform", function(d) {
-                                    console.log(projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1]);
-                                    return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")";
-
+                                if (projection(d.geometry.coordinates)) { return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")" }
                             })
                             .on("mouseover", function() {
                                 focus.style("opacity", 1);
