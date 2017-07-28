@@ -8,12 +8,13 @@
 </head>
 <body>
 <h4>Quarry Blasts and Ice Quakes are so powerful that they register like Earthquakes!</h4>
-<div id="eqChoices">
-  <input type="checkbox" class="eqChoices" value="all" checked="true">All Values
-  <input type="checkbox" class="eqChoices" value="earthquake">Just Earthquakes
-  <input type="checkbox" class="eqChoices" value="noeq">Non-Earthquakes
+<div id="eqEventTypecontainer">
+  <div id="eqChoices">
+    <input type="radio" class="eqChoices" name="dataset" value="all" checked >All Earthquakes and Non-Earthquakes
+    <input type="radio" class="eqChoices" name="dataset" value="earthquake" >Just Earthquakes
+    <input type="radio" class="eqChoices" name="dataset" value="notearthquake" >Non-Earthquakes
+  </div>
 </div>
-<div id="eqEventTypecontainer"></div>
 
 <script>
                     var width = 960,
@@ -65,16 +66,45 @@
                                     .attr("transform", "translate(" + o[0] + "," + o[1] + ")" );
                             })
 
-                        quakes.append("circle")
-                            .attr("r", 4)
-                            .style("fill", function(d) {
-                                if(d.properties.type !== "earthquake") {
-                                    return "rgb(30,144,255)"; // color is dodger blue
-                                }else {
-                                    return "rgb(222, 45, 38)"; // color is red
-                                }
-                            });
-});
+                       quakes.append("circle")
+                           .attr("r", 4)
+                           .style("fill", function(d) {
+                               if(d.properties.type !== "earthquake") {
+                                   return "rgb(30,144,255)"; // color is dodger blue
+                               }else {
+                                   return "rgb(222, 45, 38)"; // color is red
+                               }
+                           })
+
+                        d3.selectAll(".eqChoices").on("change", update);
+                        update(data);
+
+                        function update(quakes, data){
+                            var value = this.value;
+                            console.log(value);
+                            var points = svg.append("g").data(data);
+                            console.log(points)
+
+                            points.enter()
+                              .filter(function(d) {
+                                  if(value === "notearthquake") { return d.properties.type !== 'earthquake'; }
+                               })
+                              .append("g");
+
+
+
+                            points.exit().remove();
+
+
+
+
+                        }
+
+
+
+                    });
+
+
 
 
 
