@@ -49,6 +49,20 @@
     var focus = svg.append("text")
         .attr("class", "focus");
 
+    var dateObj = new Date();
+    dateObj.setDate(dateObj.getDate() - 7);
+    // Create the x scale based on the domain of the 24 hour ago object and now
+    var x = d3.scaleTime()
+        .domain([dateObj, new Date()])
+        .range([0, width ]);
+
+
+    // Append the xAxis on top
+    var xAxis = svg.append('g')
+        .attr('id', 'xAxis')
+        .attr('transform', 'translate(20, 20)')
+        .call(d3.axisTop(x));
+
     d3.json("https://s3-us-west-2.amazonaws.com/s.cdpn.io/25240/world-110m.json", function(error, world) {
 
         svg.insert("path", ".graticule")
@@ -72,7 +86,7 @@
 
     });
     d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson', function(err, data) {
-
+        var quakes = data.features.reverse();
         var quakes = svg.append("g")
             .attr("class", "quakes")
             .selectAll(".quake")
@@ -80,11 +94,10 @@
             .enter().append("g")
             .attr("class", "quake")
             .attr("transform", function(d) {
-                return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")";
+                if (d.properties.type !== "earthquake") {
+                    return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")";
+                }
             })
-       //     .attr("opacity", function(d) {
-         //       return opacity(Date.now() - d.properties.time)
-        //    })
             .on("mouseover", function() {
                 focus.style("opacity", 1);
             })
@@ -108,28 +121,28 @@
                     return "rgb(222, 45, 38)";
                 }
             });
+        var setQuakeDelay = function() {
+            for(var i = 0, max = quakes.length; i < max; i++){
+                var timeDiff = quakes[i].properties.time - dateObj;
+                var timeDiffObj = new Date(timeDiff);
+                quakes[i].delay = Date.parse(timeDiffObj) / 5000; // Speed up the animation, otherwise it would take 24 hours ><
+            }
+        }
+        setQuakeDelay();
 
-        setInterval(function() {
+        // Grab the longest delay for the xAxis marker
+        var longestDelay = quakes[quakes.length - 1].delay;
 
-            quakes.append("circle")
-                .attr("r", 0)
-                .style("stroke", function(d) {
-                    if(d.properties.type !== "earthquake") {
-                        return "rgb(30,144,255)"; // color is dodger blue
-                    } else {
-                        return "rgb(222, 45, 38)";
-                    }
-                })
-                .style("stroke-width", 2)
-                .transition()
-                .ease(d3.easeLinear)
-                .duration(function(d) { return Math.abs(125*radius(d.properties.mag)); })
-                .attr("r", function(d) { return Math.abs(radius(d.properties.mag)); })
-                .style("stroke-opacity", 0)
-                .style("stroke-width", 0)
-                .remove();
-
-        }, 5000);
+        var timeline = xAxis.append('circle')
+            .attr('class', 'transition-circle')
+            .attr('cx', 0)
+            .attr('cy', 0)
+            .attr('r', 3)
+            .style('fill', 'red')
+            .transition()
+            .ease(d3.easeLinear)
+            .duration(longestDelay - 1000)
+            .attr('cx', 680)
     });
 
 

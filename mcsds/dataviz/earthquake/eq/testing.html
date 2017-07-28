@@ -55,6 +55,7 @@ var worldMap = g.append('path')
     .attr("stroke", "#aaa")
     .attr("stroke-width", 0.5)
     .attr("d", path(topojson.mesh(us, us.objects.counties, function(a, b) { return a !== b && (a.id / 1000 | 0) === (b.id / 1000 | 0); })));
+
 g.append('path')
     .attr("stroke-width", 0.5)
     .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; })));

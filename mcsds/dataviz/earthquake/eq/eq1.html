@@ -1,0 +1,72 @@
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.0/d3.js"></script>
+    <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <link href="style.css" media="screen" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<svg id="map"></svg>
+
+<script>
+
+    var width = 960,
+        height = 600;
+
+    var projection = d3.geoAlbers()
+    var path = d3.geoPath()
+        .projection(null);
+    var svg = d3.select("#map")
+        .attr("width", width)
+        .attr("height", height);
+    var g = svg.append('g')
+
+    var focus = svg.append("text")
+        .attr("class", "focus");
+
+    d3.json("https://d3js.org/us-10m.v1.json", function(error, world) {
+        g.append("path")
+            .attr("d", path(topojson.feature(world, world.objects.states)))
+            .attr("class", "land")
+
+        g.append("path")
+            .attr("d", path(topojson.mesh(world, world.objects.counties, function(a, b) { return a.id !== b.id; })))
+            .attr("class", "borders");
+    });
+
+    d3.json('https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson', function(err, data) {
+        var quakes = svg.append("g")
+            .attr("class", "quakes")
+            .selectAll(".quake")
+            .data(data.features)
+            .enter().append("g")
+            .attr("class", "quake")
+            .on("mouseover", function() {
+                focus.style("opacity", 1);
+            })
+            .on("mouseout", function() {
+                focus.style("opacity", 0);
+            })
+            .on("mousemove", function(d) {
+                focus
+                    .text(d.properties.mag + ' ' + d.properties.type)
+                    .attr("dy", +20)
+                    .attr("text-anchor", "middle")
+            })
+        quakes.append("circle")
+            .attr("r", 4)
+            .style("fill", function(d) {
+                if(d.properties.type !== "earthquake") {
+                    return "rgb(30,144,255)"; // color is dodger blue
+                } else {
+                    return "rgb(222, 45, 38)";
+                }
+            });
+    });
+
+
+
+</script>
+
+</body>
+</html>
