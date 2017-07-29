@@ -45,7 +45,7 @@
                         var quakes = svg.append("g")
                             .attr("class", "quakes")
                             .selectAll(".quake")
-                            .data(data.features.reverse())
+                            .data(data.features)
                             .enter().append("g")
                             .attr("class", "quakes")
                             .attr("transform", function(d) {
@@ -77,23 +77,23 @@
                            })
 
                         d3.selectAll(".eqChoices").on("change", update);
-                        update(data);
+                        update();
 
-                        function update(quakes, data){
+                        function update(){
                             var value = this.value;
                             console.log(value);
-                            var points = svg.append("g").data(data);
+                            var points = svg.selectAll("#quakes").data(data);
                             console.log(points)
 
-                            points.enter()
+                            points.append("g")
                               .filter(function(d) {
                                   if(value === "notearthquake") { return d.properties.type !== 'earthquake'; }
                                })
-                              .append("g");
 
 
 
-                            points.exit().remove();
+
+
 
 
 
