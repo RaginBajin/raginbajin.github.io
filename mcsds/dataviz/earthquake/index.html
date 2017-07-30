@@ -351,9 +351,104 @@
         <section>
             <h2>Let's look at just the United States.</h2>
         </section>
-        <section>
-            <h3>Number of Earthquakes in just the United States.</h3>
+        <section data-state="eqInUS" id="eqInUS">
+            <h4>Number of Earthquakes in just the United States.</h4>
+            <div id="eqInUSContainer">
+                <div id="eqChoices">
+                    <small>
+                    <input type="radio" class="eqChoices" name="dataset" value="all" >Select to see All Earthquakes and Non-Earthquakes
+                    <input type="radio" class="eqChoices" name="dataset" value="notearthquake"> Select to see the Non-Earthquakes
+                    </small>
+                </div>
+            </div>
+            <script>                    var width = 960,
+                        height = 600;
 
+                    var projection = d3.geoAlbersUsa();
+                    var path = d3.geoPath()
+                        .projection(projection);
+                    var svg = d3.select("#eqInUSContainer").append("svg")
+                        .attr("width", width)
+                        .attr("height", height);
+                    var g = svg.append('g')
+
+                    var focus = svg.append("text")
+                        .attr("class", "focus");
+
+                    d3.json("us.json", function(error, world) {
+                        g.append("path")
+                            .attr("d", path(topojson.feature(world, world.objects.states)))
+                            .attr("class", "land")
+
+                        g.append("path")
+                            .attr("d", path(topojson.mesh(world, world.objects.counties, function(a, b) { return a.id !== b.id; })))
+                            .attr("class", "borders");
+                    });
+
+
+                    var earthquakes = "";
+                    d3.json('all_month.geojson', function(error, data) {
+                        if(error) throw error;
+                          earthquakes = data.features.reverse();
+                    });
+
+                    d3.selectAll(".eqChoices").on("change", update);
+                    update();
+
+                    function update(){
+                      var value = "";
+                      d3.selectAll(".eqChoices").each(function(d) {
+                          rb = d3.select(this);
+                          if(rb.property("checked")){
+                             value = rb.property("value");
+                          }
+                       });
+
+                       console.log(value);
+                       if (value === "notearthquake") {
+                           newData = earthquakes.filter(function(d,i) { return d.properties.type !== "earthquake"; });
+                       }else {
+                           newData = earthquakes;
+                       }
+
+                        var quakes = svg.append("g")
+                            .attr("class", "quakes")
+                            .selectAll(".quake")
+                            .data(newData,function(d) { return d; })
+                            .enter().append("g")
+                            .attr("class", "quake")
+                            .attr("transform", function(d) {
+                                if (projection(d.geometry.coordinates)) { return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")" }
+                            })
+                            .on("mouseover", function() {
+                                focus.style("opacity", 1);
+                            })
+                            .on("mouseout", function() {
+                                focus.style("opacity", 0);
+                            })
+                            .on("mousemove", function(d) {
+                                var o = projection(d.geometry.coordinates);
+                                focus
+                                    .text(d.properties.mag + ' ' + d.properties.type)
+                                    .attr("dy", +20)
+                                    .attr("text-anchor", "middle")
+                                    .attr("transform", "translate(" + o[0] + "," + o[1] + ")" );
+                            })
+
+
+                       quakes.append("circle")
+                           .attr("r", 4)
+                           .style("fill", function(d) {
+                               if(d.properties.type !== "earthquake") {
+                                   return "rgb(30,144,255)"; // color is dodger blue
+                               }else {
+                                   return "rgb(222, 45, 38)"; // color is red
+                               }
+                           })
+                           .exit().remove()
+
+                        }
+        </script>
         </section>
 
 

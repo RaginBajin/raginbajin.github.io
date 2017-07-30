@@ -10,9 +10,8 @@
 <h4>Quarry Blasts and Ice Quakes are so powerful that they register like Earthquakes!</h4>
 <div id="eqEventTypecontainer">
   <div id="eqChoices">
-    <input type="radio" class="eqChoices" name="dataset" value="all" checked >All Earthquakes and Non-Earthquakes
-    <input type="radio" class="eqChoices" name="dataset" value="earthquake" >Just Earthquakes
-    <input type="radio" class="eqChoices" name="dataset" value="notearthquake" >Non-Earthquakes
+    <input type="radio" class="eqChoices" name="dataset" value="all" >Select to see All Earthquakes and Non-Earthquakes
+    <input type="radio" class="eqChoices" name="dataset" value="notearthquake"> Select to see the Non-Earthquakes
   </div>
 </div>
 
@@ -41,13 +40,38 @@
                             .attr("class", "borders");
                     });
 
-                    d3.json('all_month.geojson', function(err, data) {
+
+                    var earthquakes = "";
+                    d3.json('all_month.geojson', function(error, data) {
+                        if(error) throw error;
+                          earthquakes = data.features.reverse();
+                    });
+
+                    d3.selectAll(".eqChoices").on("change", update);
+                    update();
+
+                    function update(){
+                      var value = "";
+                      d3.selectAll(".eqChoices").each(function(d) {
+                          rb = d3.select(this);
+                          if(rb.property("checked")){
+                             value = rb.property("value");
+                          }
+                       });
+
+                       console.log(value);
+                       if (value === "notearthquake") {
+                           newData = earthquakes.filter(function(d,i) { return d.properties.type !== "earthquake"; });
+                       }else {
+                           newData = earthquakes;
+                       }
+
                         var quakes = svg.append("g")
                             .attr("class", "quakes")
                             .selectAll(".quake")
-                            .data(data.features)
+                            .data(newData,function(d) { return d; })
                             .enter().append("g")
-                            .attr("class", "quakes")
+                            .attr("class", "quake")
                             .attr("transform", function(d) {
                                 if (projection(d.geometry.coordinates)) { return "translate(" + projection(d.geometry.coordinates)[0] + "," + projection(d.geometry.coordinates)[1] + ")" }
                             })
@@ -66,6 +90,7 @@
                                     .attr("transform", "translate(" + o[0] + "," + o[1] + ")" );
                             })
 
+
                        quakes.append("circle")
                            .attr("r", 4)
                            .style("fill", function(d) {
@@ -75,35 +100,9 @@
                                    return "rgb(222, 45, 38)"; // color is red
                                }
                            })
-
-                        d3.selectAll(".eqChoices").on("change", update);
-                        update();
-
-                        function update(){
-                            var value = this.value;
-                            console.log(value);
-                            var points = svg.selectAll("#quakes").data(data);
-                            console.log(points)
-
-                            points.append("g")
-                              .filter(function(d) {
-                                  if(value === "notearthquake") { return d.properties.type !== 'earthquake'; }
-                               })
-
-
-
-
-
-
-
-
+                           .exit().remove()
 
                         }
-
-
-
-                    });
-
 
 
 
